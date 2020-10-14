@@ -1,2 +1,2 @@
 # JavaWorkY2
-hello
+This is documentation for my Java tutorial work for year 2.
