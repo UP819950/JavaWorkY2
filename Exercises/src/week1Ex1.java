@@ -1,4 +1,4 @@
-public class exercise01 {
+public class week1Ex1 {
 
     /*Ex1*/
 
