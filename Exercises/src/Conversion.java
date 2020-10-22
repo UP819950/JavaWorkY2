@@ -1,24 +1,37 @@
 
+import java.util.ArrayList;
 
-public class MyConversionClass {
-
-    private ArrayList<MyClass> myObjects;
+public class Conversion {
 
 
-    public MyConversionClass(){
-        myObjects = new ArrayList<MyClass>();
+
+
+
+
+
+    public String[] createStringArray(int size){
+        String[] SA = new String[size];
+        return SA;
+    }
+    public int[] createIntArray(int size){
+        int [] IA = new int[size];
+        return IA;
+    }
+    public double[] createDoubleArray(int size){
+        double [] DA = new double[size];
+        return DA;
     }
 
-    public void ConvertArray(MyClass [] myObjects ){
-
-        int length = myObjects.length;
-
-        for(int i = 0; i<length;i++){
-
-            this.myObjects.add(myObjects[i]);
-        }
-
+    public ArrayList createArrayList(){
+        ArrayList list = new ArrayList();
+        return list;
     }
+
+
+
+
+
+
 
 
 }
