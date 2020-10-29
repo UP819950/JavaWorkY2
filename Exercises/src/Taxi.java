@@ -29,6 +29,13 @@
 
         }
 
+
+
+
+
+
+
+
         public int getCustomers() { return gAPI.getCustomers();}
         public int getSeats() { return gAPI.getSeats();}
         public double getFuel() { return gAPI.getFuel();}
