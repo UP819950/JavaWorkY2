@@ -24,7 +24,11 @@ public class XNode {
             return linkedNode;
         }
     }
+
+
     public int getID(){
         return nodeID;
     }
+
+
 }
