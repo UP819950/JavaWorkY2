@@ -26,7 +26,7 @@ public class StackNode {
 
     @Override
     public String toString() {
-        return "StackNode: " +
+        return "\nStackNode: " +
                 "ID: " + ID +
                 ", linkedNode: " + linkedNode;
     }

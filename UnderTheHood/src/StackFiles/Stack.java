@@ -1,5 +1,7 @@
 package StackFiles;
 
+import java.util.ArrayList;
+
 public class Stack {
 
     StackNode firstNode;
@@ -35,24 +37,32 @@ public class Stack {
     }
 
 
-    /*
+@Override
    public String toString(){
 
-        for (int i = 0 ; i < stackLength ; i ++ ){
 
 
+       //(topNode.toString());
+
+       String output = null;
+       String tn = topNode.toString();
+       output = "Number of Nodes in stack: " + this.stackLength + " Nodes in stack: \n" + tn;
 
 
+        for (int i = 0 ; i < 0  ; i ++ ){
 
-            //loop round stack and return each nodes tostring
+            StackNode temp = topNode.getLinkedNode();
+            String sn = temp.toString();
+            output += sn ;
+            temp = temp.getLinkedNode();
+
         }
 
-
-
+        return  output;
 
    }
 
-*/
+
 
 
 
