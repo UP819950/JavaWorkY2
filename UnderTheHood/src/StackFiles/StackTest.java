@@ -1,5 +1,7 @@
 package StackFiles;
 
+import java.util.Scanner;
+
 public class StackTest {
 
     public static void main (String[] args){
@@ -34,6 +36,27 @@ public class StackTest {
 
 
         st.pop();
+
+        System.out.println(st.toString());
+
+
+
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("How many more nodes do you wish to add: ");
+        int nodeAmount = sc.nextInt();
+
+        for (int i = 0 ; i < nodeAmount ; i ++ ){
+            System.out.println("Node ID: ");
+            int newID = sc.nextInt();
+
+            StackNode userAddition = new StackNode(newID, null);
+            st.push(userAddition);
+
+        }
+
+
 
         System.out.println(st.toString());
 
