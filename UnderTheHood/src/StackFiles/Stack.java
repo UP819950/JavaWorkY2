@@ -45,7 +45,19 @@ public class Stack {
     }
 
 
-@Override
+    public StackNode getFirstNode() {
+        return firstNode;
+    }
+
+    public StackNode getTopNode() {
+        return topNode;
+    }
+
+    public int getStackLength() {
+        return stackLength;
+    }
+
+    @Override
    public String toString(){
 
 
@@ -54,7 +66,7 @@ public class Stack {
 
        String output = null;
        String tn = topNode.toString();
-       output = "Number of Nodes in stack: " + this.stackLength + " Nodes in stack: \n" + tn;
+       output = "\nNumber of Nodes in stack: " + this.stackLength + " Nodes in stack: \n" + tn;
 
 
         for (int i = 0 ; i < 0  ; i ++ ){

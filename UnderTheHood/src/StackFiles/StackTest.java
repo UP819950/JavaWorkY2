@@ -45,15 +45,19 @@ public class StackTest {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("How many more nodes do you wish to add: ");
+        System.out.println("\nHow many more nodes do you wish to add: ");      //// USER INPUT PUSH TEST
         int nodeAmount = sc.nextInt();
 
-
-        /////////////////// ADD IF TO MAKE SURE CANNOT DUPLICATE ID
-
         for (int i = 0 ; i < nodeAmount ; i ++ ){
-            System.out.println("Node ID: ");
+
+            System.out.println("Set node ID (cannot be same as pre-existing IDs): ");
             int newID = sc.nextInt();
+
+            while (newID <= st.getStackLength()){
+                System.out.println("ID Taken, set a different ID: ");
+                newID = sc.nextInt();
+
+            }
 
             StackNode userAddition = new StackNode(newID, null);
             st.push(userAddition);
@@ -62,7 +66,7 @@ public class StackTest {
 
 
 
-        System.out.println("How many items do you wish to remove from the stack: ");
+        System.out.println("How many items do you wish to remove from the stack: "); //// USER INPUT POP TEST
         int userDeleteNodes = sc.nextInt();
 
         for (int i = 0 ; i < userDeleteNodes ; i ++){
@@ -79,11 +83,12 @@ public class StackTest {
 
 
 
-        JFrame f=new JFrame("Stack Visualized");
+        JFrame f=new JFrame("Stack Visualized");         ////// CREATES FRAME AND TEXT AREA
         final JTextArea ta = new JTextArea();
         ta.setBounds(50,50, 270,250);
+        ta.setText(st.toString());
 
-        JButton b = new JButton("Remove from");
+        JButton b = new JButton("Remove from");           //// BUTTON TO REMOVE FROM STACK VISUALIZER
         b.setBounds(50,300,115,30);
         b.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -93,7 +98,7 @@ public class StackTest {
             }
         });
 
-        JButton b2 = new JButton("Add to");
+        JButton b2 = new JButton("Add to");             //// BUTTON TO ADD TO STACK VISUALIZER
         b2.setBounds(205,300,115,30);
         b2.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e2){
@@ -106,7 +111,7 @@ public class StackTest {
 
 
 
-        f.add(b);f.add(ta);f.add(b2);
+        f.add(b);f.add(ta);f.add(b2);             ////// DRAWS TO FRAME
         f.setSize(400,400);
         f.setLayout(null);
         f.setVisible(true);
