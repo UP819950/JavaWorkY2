@@ -95,7 +95,7 @@ public class QueueTest {
             }
         });
 
-        JButton b2 = new JButton("Add to");             //// BUTTON TO ADD TO STACK VISUALIZER
+        JButton b2 = new JButton("Enqueue");             //// BUTTON TO ADD TO STACK VISUALIZER
         b2.setBounds(205,300,115,30);
         b2.setBackground(Color.green);
         b2.addActionListener(new ActionListener(){
