@@ -1,5 +1,6 @@
 package StackFiles;
 
+import java.awt.*;
 import java.util.Scanner;
 import javax.swing.*;
 import java.awt.event.*;
@@ -85,26 +86,49 @@ public class StackTest {
 
         JFrame f=new JFrame("Stack Visualized");         ////// CREATES FRAME AND TEXT AREA
         final JTextArea ta = new JTextArea();
+        ta.setBackground(Color.black);
         ta.setBounds(50,50, 270,250);
-        ta.setText(st.toString());
+        int newTop = st.getTopNode().getID();
+        String newTopDisplay = ("Current top node: " + newTop);
+        ta.setText(newTopDisplay + "\n" +  st.toString());
+        ta.setForeground(Color.white);
 
         JButton b = new JButton("Remove from");           //// BUTTON TO REMOVE FROM STACK VISUALIZER
         b.setBounds(50,300,115,30);
+        b.setBackground(Color.red);
         b.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                st.pop();
-                String removeOutput = st.toString();
+
+                try {
+                    st.pop();
+                } catch (CustomException ce ) {
+                    System.out.println(ce.getMessage());
+                }
+                int newTop;
+                newTop = st.getTopNode().getID();
+
+                String newTopDisplay = ("Current top node: " + newTop);
+
+                String removeOutput = newTopDisplay + "\n" + st.toString();
                 ta.setText(removeOutput);
+                ta.setForeground(Color.red);
             }
         });
 
         JButton b2 = new JButton("Add to");             //// BUTTON TO ADD TO STACK VISUALIZER
         b2.setBounds(205,300,115,30);
+        b2.setBackground(Color.green);
         b2.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e2){
+
                 st.autoPush();
-                String addToOutput = st.toString();
+                int newTop = st.getTopNode().getID();
+                String newTopDisplay = ("Current top node: " + newTop);
+
+                String addToOutput = newTopDisplay + "\n" +  st.toString();
                 ta.setText(addToOutput);
+                ta.setForeground(Color.green);
+
             }
         });
 

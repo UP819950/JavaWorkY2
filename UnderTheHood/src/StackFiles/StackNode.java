@@ -12,6 +12,9 @@ public class StackNode {
 
 
     public StackNode getLinkedNode() {
+        if(linkedNode == null){
+            throw new CustomException("Node ID: " + ID + " Has no linked node");
+        }
         return linkedNode;
     }
 

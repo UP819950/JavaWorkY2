@@ -19,6 +19,12 @@ public class Stack {
 
     public void pop(){
 
+        if (topNode.getLinkedNode() == null){
+            topNode = null;
+            firstNode = null;
+            stackLength = 0;
+            throw new CustomException("Last node in stack");
+        }
         StackNode temp = topNode.getLinkedNode();
         topNode = null;
         topNode = temp;
@@ -50,7 +56,14 @@ public class Stack {
     }
 
     public StackNode getTopNode() {
+        if(topNode == null){
+            throw new CustomException("No Nodes in Stack");
+        }
         return topNode;
+    }
+
+    public void setTopNode(StackNode topNode) {
+        this.topNode = topNode;
     }
 
     public int getStackLength() {
