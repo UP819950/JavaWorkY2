@@ -1,6 +1,8 @@
 package StackFiles;
 
 import java.util.Scanner;
+import javax.swing.*;
+import java.awt.event.*;
 
 public class StackTest {
 
@@ -27,16 +29,15 @@ public class StackTest {
         st.push(sn7);
         st.push(sn8);
 
-        System.out.println(st.toString());
-
-
-        st.pop();
 
         System.out.println(st.toString());
 
 
         st.pop();
+        System.out.println(st.toString());
 
+
+        st.pop();
         System.out.println(st.toString());
 
 
@@ -47,18 +48,72 @@ public class StackTest {
         System.out.println("How many more nodes do you wish to add: ");
         int nodeAmount = sc.nextInt();
 
+
+        /////////////////// ADD IF TO MAKE SURE CANNOT DUPLICATE ID
+
         for (int i = 0 ; i < nodeAmount ; i ++ ){
             System.out.println("Node ID: ");
             int newID = sc.nextInt();
 
             StackNode userAddition = new StackNode(newID, null);
             st.push(userAddition);
+        }
+        System.out.println(st.toString());
 
+
+
+        System.out.println("How many items do you wish to remove from the stack: ");
+        int userDeleteNodes = sc.nextInt();
+
+        for (int i = 0 ; i < userDeleteNodes ; i ++){
+            st.pop();
         }
 
-
-
         System.out.println(st.toString());
+
+
+
+
+
+
+
+
+
+        JFrame f=new JFrame("Stack Visualized");
+        final JTextArea ta = new JTextArea();
+        ta.setBounds(50,50, 270,250);
+
+        JButton b = new JButton("Remove from");
+        b.setBounds(50,300,115,30);
+        b.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                st.pop();
+                String removeOutput = st.toString();
+                ta.setText(removeOutput);
+            }
+        });
+
+        JButton b2 = new JButton("Add to");
+        b2.setBounds(205,300,115,30);
+        b2.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e2){
+                st.autoPush();
+                String addToOutput = st.toString();
+                ta.setText(addToOutput);
+            }
+        });
+
+
+
+
+        f.add(b);f.add(ta);f.add(b2);
+        f.setSize(400,400);
+        f.setLayout(null);
+        f.setVisible(true);
+
+
+
+
 
 
 

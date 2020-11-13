@@ -27,13 +27,21 @@ public class Stack {
 
 
 
-
-
-
     public void push(StackNode newNode){
         newNode.setLinkedNode(this.topNode);
         this.topNode = newNode;
         this.stackLength += 1;
+    }
+
+    public void autoPush(){
+
+        int autoId = topNode.getID() + 1;
+        StackNode autoNode = new StackNode(autoId, null);
+        autoNode.setLinkedNode(this.topNode);
+
+        this.topNode = autoNode;
+        this.stackLength += 1;
+
     }
 
 
@@ -53,7 +61,7 @@ public class Stack {
 
             StackNode temp = topNode.getLinkedNode();
             String sn = temp.toString();
-            output += sn ;
+            output += sn + "\n" ;
             temp = temp.getLinkedNode();
 
         }
