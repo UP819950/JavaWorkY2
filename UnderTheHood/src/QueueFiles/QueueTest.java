@@ -25,6 +25,7 @@ public class QueueTest {
         System.out.println(Q.toString());
 
         Q.deQueue();
+        Q.deQueue();
 
 
         System.out.println(Q.toString());
