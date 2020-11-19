@@ -10,11 +10,7 @@ public class StackNode {
         this.linkedNode = linkedNode;
     }
 
-
     public StackNode getLinkedNode() {
-        if(linkedNode == null){
-            throw new CustomException("Node ID: " + ID + " Has no linked node");
-        }
         return linkedNode;
     }
 
@@ -26,11 +22,20 @@ public class StackNode {
         return ID;
     }
 
-
     @Override
     public String toString() {
+
+        String linkedIDOutput;
+
+        if (linkedNode == null){
+            linkedIDOutput = ", linkedNode: No Linked Node";
+        } else {
+            linkedIDOutput = ", linkedNode: " + linkedNode.getID();
+        }
+
+
         return "\nStackNode: " +
                 "ID: " + ID +
-                ", linkedNode: " + linkedNode;
+                linkedIDOutput;
     }
 }
