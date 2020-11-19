@@ -1,5 +1,7 @@
 package QueueFiles;
 
+import java.util.InputMismatchException;
+
 public class CustomException extends NullPointerException {
 
 
@@ -7,3 +9,4 @@ public class CustomException extends NullPointerException {
         super(customInfo);
     }
 }
+

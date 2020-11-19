@@ -27,7 +27,12 @@ public class StackTest {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("\nHow many more nodes do you wish to add: ");      //// USER INPUT PUSH TEST
+
         int nodeAmount = sc.nextInt();
+        while (nodeAmount < 0) {
+            System.out.println("Please enter 0 or a positive integer: ");
+            nodeAmount = sc.nextInt();
+        }
 
         if (nodeAmount == 0 ){
 
@@ -107,8 +112,6 @@ public class StackTest {
             ta.setText(newTopDisplay + "\n" +  st.toString());
             ta.setForeground(Color.white);
         }
-
-
 
 
         JButton b = new JButton("Remove from");           //// BUTTON TO REMOVE FROM STACK VISUALIZER

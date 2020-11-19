@@ -33,7 +33,6 @@ public class StackNode {
             linkedIDOutput = ", linkedNode: " + linkedNode.getID();
         }
 
-
         return "\nStackNode: " +
                 "ID: " + ID +
                 linkedIDOutput;
