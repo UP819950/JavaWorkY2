@@ -48,11 +48,17 @@ public class StackTest {
 
             }
 
+
+
             if (autoOrManual == 0) {
+                
 
                 for (int i = 0; i < nodeAmount; i++) {
                     st.autoPush();
+
                 }
+
+
 
             } else {
 
@@ -73,7 +79,9 @@ public class StackTest {
             }
         }
 
+
         System.out.println(st.toString());
+
 
         System.out.println("How many items do you wish to remove from the stack: "); //// USER INPUT POP TEST
         int userDeleteNodes = sc.nextInt();
