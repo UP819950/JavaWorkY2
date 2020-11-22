@@ -11,6 +11,7 @@ public class List {
     ListNode tail;
     int listSize;
     boolean idSorted;
+    boolean gradeSorted;
 
     public List(ListNode head, ListNode tail) {
         this.head = head;

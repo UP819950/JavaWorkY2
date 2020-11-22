@@ -42,34 +42,32 @@ public class ListTest {
         l.append(ln9);
         ////////////////////////////////////////////////////////////////////////////////////////////
 
-/*
-        System.out.println(l.toString());
+
+
+
+
+        l.addStudent();
+
+        l.populateList(190);
+
+        //System.out.println(l.toString());
+
         sortObjectForl.sortByID();
         System.out.println(l.toString());
 
-
-
-
-        System.out.println("\n\n\nSearching for List Node 2 , student 89:\n");
+        System.out.println("\n\n\nSearching for List Node 2 , student 2:\n");
         ListNode foundNode = bsForSortedL.bSearch(ln2);
         System.out.println(foundNode.student.toString());
 
-        System.out.println("\n\n\nSearching for List Node 4 , student 12:\n");
+        System.out.println("\n\n\nSearching for List Node 4 , student 4:\n");
         foundNode = bsForSortedL.bSearch(ln4);
         System.out.println(foundNode.student.toString());
-*/
 
 
-        //l.addStudent();
+        System.out.println("----------------------------------------------------------------");
 
-        l.populateList(20);
-
+        sortObjectForl.sortByGrade();
         System.out.println(l.toString());
-
-        sortObjectForl.sortByID();
-        System.out.println(l.toString());
-
-
 
 
 

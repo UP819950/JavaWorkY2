@@ -45,6 +45,40 @@ public class BubbleSort {
 
     }
 
+    public void sortByGrade(){
+
+        if (list.isEmpty() == true || list.onlyOneItem() == true ){return;}
+
+
+        ListNode temp = list.getHead();
+        ListNode tempNext = temp.getNextNode();
+
+
+        do {
+            if (temp.getStudent().getCurrentGrade() < tempNext.getStudent().getCurrentGrade()) {
+                swap(temp,tempNext);
+                sortByGrade();
+            }
+            temp = tempNext;
+            tempNext = tempNext.getNextNode();
+
+            if (temp.getNextNode() == null){
+                list.tail = temp ;
+            }
+
+
+
+        } while ( tempNext != null);
+
+
+
+        list.gradeSorted = true;
+
+
+        return;
+
+    }
+
 
     public ListNode getPreviousNode(ListNode tempNode){
 
