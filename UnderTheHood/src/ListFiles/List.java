@@ -1,5 +1,6 @@
 package ListFiles;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -138,6 +139,37 @@ public class List {
         return  output;
     }
 
+/*
+    public int checkForDuplicates(ArrayList unavailable , int id, int addNum, int index ){
+
+
+        int theoTotal = (addNum + listSize);
+
+
+        for (index = 0 ; index < unavailable.size() ; index++){
+
+            int check = (int) unavailable.get(index);
+
+            if (id == check ){
+                id = (int) Math.floor(Math.random() * theoTotal);
+
+
+                checkForDuplicates(unavailable,id,addNum, 0);
+                if (index == unavailable.size()){
+                    return  id;
+                }
+            }
+
+
+
+
+
+        }
+
+
+        return theoTotal;
+    }
+*/
 
 
     public void populateList(int addNum){
@@ -146,7 +178,7 @@ public class List {
         String[] lastName =  { "Anderson", "Ashwoon", "Aikin", "Bateman", "Bongard", "Bowers", "Boyd", "Cannon", "Cast", "Deitz", "Dewalt", "Ebner", "Frick", "Hancock", "Haworth", "Hesch", "Hoffman", "Kassing", "Knutson", "Lawless", "Lawicki", "Mccord", "McCormack", "Miller", "Myers", "Nugent", "Ortiz", "Orwig", "Ory", "Paiser", "Pak", "Pettigrew", "Quinn", "Quizoz", "Ramachandran", "Resnick", "Sagar", "Schickowski", "Schiebel", "Sellon", "Severson", "Shaffer", "Solberg", "Soloman", "Sonderling", "Soukup", "Soulis", "Stahl", "Sweeney", "Tandy", "Trebil", "Trusela", "Trussel", "Turco", "Uddin", "Uflan", "Ulrich", "Upson", "Vader", "Vail", "Valente", "Van Zandt", "Vanderpoel", "Ventotla", "Vogal", "Wagle", "Wagner", "Wakefield", "Weinstein", "Weiss", "Woo", "Yang", "Yates", "Yocum", "Zeaser", "Zeller", "Ziegler", "Bauer", "Baxster", "Casal", "Cataldi", "Caswell", "Celedon", "Chambers", "Chapman", "Christensen", "Darnell", "Davidson", "Davis", "DeLorenzo", "Dinkins", "Doran", "Dugelman", "Dugan", "Duffman", "Eastman", "Ferro", "Ferry", "Fletcher", "Fietzer", "Hylan", "Hydinger", "Illingsworth", "Ingram", "Irwin", "Jagtap", "Jenson", "Johnson", "Johnsen", "Jones", "Jurgenson", "Kalleg", "Kaskel", "Keller", "Leisinger", "LePage", "Lewis", "Linde", "Lulloff", "Maki", "Martin", "McGinnis", "Mills", "Moody", "Moore", "Napier", "Nelson", "Norquist", "Nuttle", "Olson", "Ostrander", "Reamer", "Reardon", "Reyes", "Rice", "Ripka", "Roberts", "Rogers", "Root", "Sandstrom", "Sawyer", "Schlicht", "Schmitt", "Schwager", "Schutz", "Schuster", "Tapia", "Thompson", "Tiernan", "Tisler" };
 
 
-        ArrayList<Integer> unavailableIDs = new ArrayList<Integer>();
+        HashSet<Integer> unavailableIDs = new HashSet<Integer>();
         int data;
         ListNode tempNode = head;
         for(int steps = 0;steps < listSize; steps ++){
@@ -158,34 +190,31 @@ public class List {
 
         for (int i = 0 ; i < addNum ; i ++ ){
 
-            int idIndex;
+            int idIndex = 0;
             int firstIndex;
             int secondIndex;
-            int check;
             double grade;
             String fName;
             String lName;
-            int theoTotal = (addNum + listSize);
+            //int itemToCheck;
+           // int theoTotal = (addNum + listSize);
+            //int[] check = new int[unavailableIDs.size()];
 
-            idIndex = (int) Math.floor(Math.random() * theoTotal);
-
-
-            for (int j = 0; j < unavailableIDs.size(); j++) {
-
-                check = unavailableIDs.get(j);
-
-                if (check == idIndex){
-                    while (check == idIndex) {
-                        idIndex = (int) Math.floor(Math.random() * theoTotal);
-                    }
-                }
+            //idIndex = (int) Math.floor(Math.random() * listSize);
 
 
 
 
+
+
+            idIndex = (int) (Math.random() * listSize + 2);
+            while (unavailableIDs.contains(idIndex)){
+                idIndex = (int) (Math.random() * listSize + 2);
             }
-
             unavailableIDs.add(idIndex);
+
+
+
 
 
 

@@ -11,15 +11,15 @@ public class ListTest {
         BubbleSort sortObjectForl = new BubbleSort(l);
         BinarySearch bsForSortedL = new BinarySearch(l);
 
-        Student st1 = new Student(56, "John", "Smith", 45.6);
-        Student st2 = new Student(89, "Matt", "Jones", 65.6);
-        Student st3 = new Student(22, "Andy", "Carr", 32.6);
-        Student st4 = new Student(12, "Paul", "Fletcher", 76.6);
-        Student st5 = new Student(53, "Oliver", "Sampson", 11.9);
-        Student st6 = new Student(13, "Jack", "Collins", 57.8);
-        Student st7 = new Student(87, "James", "Archer", 23.6);
-        Student st8 = new Student(66, "Adam", "Mahon", 24.2);
-        Student st9 = new Student(51, "Pete", "Ball", 14.2);
+        Student st1 = new Student(1, "John", "Smith", 45.6);
+        Student st2 = new Student(2, "Matt", "Jones", 65.6);
+        Student st3 = new Student(3, "Andy", "Carr", 32.6);
+        Student st4 = new Student(4, "Paul", "Fletcher", 76.6);
+        Student st5 = new Student(5, "Oliver", "Sampson", 11.9);
+        Student st6 = new Student(6, "Jack", "Collins", 57.8);
+        Student st7 = new Student(7, "James", "Archer", 23.6);
+        Student st8 = new Student(8, "Adam", "Mahon", 24.2);
+        Student st9 = new Student(9, "Pete", "Ball", 14.2);
 
         ListNode ln1 = new ListNode(st1, null);
         ListNode ln2 = new ListNode(st2, null);
@@ -62,7 +62,7 @@ public class ListTest {
 
         //l.addStudent();
 
-        l.populateList(100);
+        l.populateList(20);
 
         System.out.println(l.toString());
 
