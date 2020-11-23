@@ -23,7 +23,7 @@ public class BinarySearch {
     }
 
 
-    public ListNode bSearch(ListNode searchItem){
+    public ListNode bSearch(int StudentID){
 
         ListNode tempNode = sortedList.head;
 
@@ -44,9 +44,9 @@ public class BinarySearch {
                 //go to mid point
                 tempNode = seek(midpoint);
                 //check
-                if (searchItem == tempNode) {
+                if (StudentID == tempNode.getStudent().getStudentID()) {
                     found = true;
-                } else if (searchItem.student.getStudentID() >= tempNode.student.getStudentID()) {
+                } else if (StudentID >= tempNode.student.getStudentID()) {
                     bottomIndex = midpoint;
                     midpoint = getMid(bottomIndex, topIndex);
                 } else {
