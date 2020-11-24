@@ -9,11 +9,14 @@ public class ListTest {
 
     public  static void main (String[] args){
 
-
+        BinarySearch s = new BinarySearch(null);
         BubbleSort b = new BubbleSort(null);
-        List l = new List(null,null,b);
+        List l = new List(null,null,b, s);
         l.setSort(b);
+        l.setSearch(s);
         b.setList(l);
+        s.setSortedList(l);
+
 
         BinarySearch bsForSortedL = new BinarySearch(l);
 
@@ -36,6 +39,10 @@ public class ListTest {
 
         l.sort.sortByID();
         System.out.println(l.toString());
+
+        System.out.println("\n\n\nSearching for Student ID 765450:\n");
+        ListNode foundNode = l.search.bSearch(765450);
+        System.out.println(foundNode.student.toString());
 
        // l.populateList(190);   // adds a random student with random data to the list use args to specify amount.
        // System.out.println(l.toString());

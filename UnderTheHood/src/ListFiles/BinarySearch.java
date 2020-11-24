@@ -9,6 +9,9 @@ public class BinarySearch {
         this.sortedList = sortedList;
     }
 
+    public void setSortedList(List sortedList) {
+        this.sortedList = sortedList;
+    }
 
     public int getMid(int bottom, int top){
         int length = top - bottom;

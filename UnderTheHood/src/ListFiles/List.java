@@ -13,15 +13,20 @@ public class List {
     boolean idSorted;
     boolean gradeSorted;
     BubbleSort sort;
+    BinarySearch search;
 
 
-    public List(ListNode head, ListNode tail , BubbleSort sort) {
+    public List(ListNode head, ListNode tail , BubbleSort sort, BinarySearch search) {
         this.head = head;
         this.tail = tail;
     }
 
     public void setSort(BubbleSort sort) {
         this.sort = sort;
+    }
+
+    public void setSearch(BinarySearch search) {
+        this.search = search;
     }
 
     public ListNode getHead() {
