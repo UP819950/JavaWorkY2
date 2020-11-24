@@ -45,6 +45,10 @@ public class BubbleSort {
 
     }
 
+    public void setList(List list) {
+        this.list = list;
+    }
+
     public void sortByGrade(){
 
         if (list.isEmpty() == true || list.onlyOneItem() == true ){return;}

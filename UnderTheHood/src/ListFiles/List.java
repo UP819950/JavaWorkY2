@@ -20,6 +20,10 @@ public class List {
         this.tail = tail;
     }
 
+    public void setSort(BubbleSort sort) {
+        this.sort = sort;
+    }
+
     public ListNode getHead() {
         return head;
     }

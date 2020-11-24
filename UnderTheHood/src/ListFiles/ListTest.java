@@ -10,11 +10,11 @@ public class ListTest {
     public  static void main (String[] args){
 
 
+        BubbleSort b = new BubbleSort(null);
+        List l = new List(null,null,b);
+        l.setSort(b);
+        b.setList(l);
 
-        List l = null;
-        BubbleSort b = new BubbleSort(l);
-        l = new List(null, null, b);
-        //BubbleSort sortObjectForl = new BubbleSort(l);
         BinarySearch bsForSortedL = new BinarySearch(l);
 
         /////////////////////////////DATA BUILDER/////////////////////////////////////////////////
