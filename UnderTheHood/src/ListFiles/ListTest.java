@@ -11,15 +11,17 @@ public class ListTest {
 
 
 
-        List l = new List(null, null);
-        BubbleSort sortObjectForl = new BubbleSort(l);
+        List l = null;
+        BubbleSort b = new BubbleSort(l);
+        l = new List(null, null, b);
+        //BubbleSort sortObjectForl = new BubbleSort(l);
         BinarySearch bsForSortedL = new BinarySearch(l);
 
         /////////////////////////////DATA BUILDER/////////////////////////////////////////////////
         readCSV(l);
         //////////////////////////////////////////////////////////////////////////////////////////
         System.out.println(l.toString());
-
+/*
         System.out.println("\nSorting By grade ------------------------");
         sortObjectForl.sortByGrade();
         System.out.println(l.toString());
@@ -30,7 +32,10 @@ public class ListTest {
 
         System.out.println("\n\n\nSearching for Student ID 765450:\n");
         ListNode foundNode = bsForSortedL.bSearch(765450);
-        System.out.println(foundNode.student.toString());
+        System.out.println(foundNode.student.toString());*/
+
+        l.sort.sortByID();
+        System.out.println(l.toString());
 
        // l.populateList(190);   // adds a random student with random data to the list use args to specify amount.
        // System.out.println(l.toString());

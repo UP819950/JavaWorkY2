@@ -12,8 +12,10 @@ public class List {
     int listSize;
     boolean idSorted;
     boolean gradeSorted;
+    BubbleSort sort;
 
-    public List(ListNode head, ListNode tail) {
+
+    public List(ListNode head, ListNode tail , BubbleSort sort) {
         this.head = head;
         this.tail = tail;
     }
@@ -56,6 +58,8 @@ public class List {
         }
 
     }
+
+
 
 
     public ListNode addStudent(){
